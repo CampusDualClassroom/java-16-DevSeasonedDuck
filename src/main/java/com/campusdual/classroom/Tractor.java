@@ -1,6 +1,6 @@
 package com.campusdual.classroom;
 
-public class Tractor{
+public class Tractor implements IMachine{
 
 	protected int horsePower = 0;
 	
@@ -14,6 +14,20 @@ public class Tractor{
 
 	public void backward() {
 		System.out.println("El tractor retrocede");
+	}
+
+	public void start(){
+		System.out.println("Tractor encendido");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("Tractor detenido");
+	}
+
+	@Override
+	public void maintenance() {
+		System.out.println("Tractor en mantenimiento");
 	}
 
 }
